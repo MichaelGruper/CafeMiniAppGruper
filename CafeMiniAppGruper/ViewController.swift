@@ -8,10 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var items : [String] = ["Chicken", "Beef", "Rice", "Pasta", "Cheese"]
+    var prices : [Double] = [3.79, 4.26, 2.99, 3.50, 2.90]
+    @IBOutlet weak var itemTextFieldOutlet: UITextField!
+    @IBOutlet weak var quantityTextFieldOutlet: UITextField!
+    @IBOutlet weak var textViewOutlet: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        for i in 0..<items.count {
+            textViewOutlet.text += "Item: \(items[i])\n Price: $\(prices[i])\n \n"
+        }
     }
 
 
